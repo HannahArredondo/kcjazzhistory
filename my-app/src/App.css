@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+  background-image: url('./jazz_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.App-logo {
+  height: 80px;
+  align: left;
+}
+
+.App-header {
+  
+  background-color: rgb(255, 255, 255, 0.7);
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.menu{
+  display: inline-block;
+  color: rgb(190, 30, 45);;
+  text-decoration: none;
+}
+li a {
+  display: inline-block;
+  display: block;
+  color: rgb(190, 30, 45);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul li{
+  display: inline-block;
+}
+
+.header-menu ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.menu-border{
+  border-top: 1.5px solid rgba(190, 30, 45, 0.808);
+  border-bottom: 1.5px solid rgb(190, 30, 45);
+}
+.footer-border{
+  background-color: rgb(190, 30, 45);
+}
+.footer-info {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+  color: white;
+}
+
+.footer-info li a{
+  display: inline-block;
+  color: white;
+}
