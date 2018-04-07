@@ -3,16 +3,16 @@
   background-image: url('./jazz_background.png');
   background-repeat: no-repeat;
   background-size: cover;
-  
+  height: 100%;
 }
 
 .App-logo {
   height: 80px;
-  align: left;
+  vertical-align: center;
 }
 
 .App-header {
-  
+
   background-color: rgb(255, 255, 255, 0.7);
   height: 150px;
   padding: 20px;
@@ -23,24 +23,23 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.info{
+  padding: 8px 16px;
+  margin-top: 30px;
+  margin-left: 8%;
+  margin-right: 8%;
+  color: white;
+  background-color: rgba(190, 30, 45, 0.808);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.info a {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: underline;
 }
 
-.menu{
-  display: inline-block;
-  color: rgb(190, 30, 45);;
-  text-decoration: none;
-}
-li a {
-  display: inline-block;
-  display: block;
-  color: rgb(190, 30, 45);
+.menu a {
+  color: rgba(190, 30, 45);
   padding: 8px 16px;
   text-decoration: none;
 }
@@ -49,19 +48,19 @@ ul li{
   display: inline-block;
 }
 
-.header-menu ul {
-  padding: 0px;
-  margin: 0px;
+ul {
   text-align: center;
-  display:inline-block;
   vertical-align:top;
 }
 
-.menu-border{
+.menu{
+  vertical-align: baseline;
   border-top: 1.5px solid rgba(190, 30, 45, 0.808);
   border-bottom: 1.5px solid rgb(190, 30, 45);
+  background-color: rgb(255, 255, 255, 0.7);
 }
 .footer-border{
+  padding: 20px;
   background-color: rgb(190, 30, 45);
 }
 .footer-info {
@@ -76,4 +75,13 @@ ul li{
 .footer-info li a{
   display: inline-block;
   color: white;
+}
+
+h2, h3{
+  color: white;
+}
+.App-footer{
+  width: 100%;
+  position:absolute;
+  bottom:0;
 }
