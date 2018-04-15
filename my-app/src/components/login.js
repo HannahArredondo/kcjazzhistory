@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import './components.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
 
 class LogIn extends React.Component {
   constructor(props) {
@@ -22,7 +17,7 @@ class LogIn extends React.Component {
   handleSubmit(event) {
     console.log(event,this.state);
     event.preventDefault();
-    if (this.state.password =="password" && this.state.username=="username"){
+    if (this.state.password === "password" && this.state.username === "username"){
       console.log("Welcome {this.state.username}")
     } else{ console.log("FAIL!");}
   }
@@ -42,7 +37,7 @@ class LogIn extends React.Component {
 
 
 // function checkUser(props) {
-//   if (props.password =="password" && props.user=="username"){
+//   if (props.password === "password" && props.user === "username"){
 //     console.log("Success!")
 //   }
 // }

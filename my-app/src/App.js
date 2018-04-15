@@ -70,8 +70,7 @@ const App = () => (
               <div className="footer-border">
                 <ul className="footer-info">
                     <li>Follow the American Jazz Museum at &nbsp;</li>
-                    <li><a href="#">Twitter</a> &nbsp;</li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="https://twitter.com/americanjazzkc">Twitter</a> &nbsp;</li>
                 </ul>
               </div>
             </div>
