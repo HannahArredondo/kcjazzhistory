@@ -1,18 +1,20 @@
 .App {
   text-align: center;
-  background-image: url('./jazz_background.png');
+}
+body {
+  text-align: center;
+  /* background-image: url('./jazz_background.png'); */
+  background-color: gray;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
+  width: auto;
 }
 
 .App-logo {
   height: 80px;
-  vertical-align: center;
+  margin-top: 10px;
 }
 
 .App-header {
-
   background-color: rgb(255, 255, 255, 0.7);
   height: 150px;
   padding: 20px;
@@ -24,11 +26,16 @@
 }
 
 .info{
-  padding: 8px 16px;
+  text-align: center;
   margin-top: 30px;
+  margin-bottom: 30px;
   margin-left: 8%;
   margin-right: 8%;
   color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 4%;
+  margin-right: 4%;
   background-color: rgba(190, 30, 45, 0.808);
 }
 
@@ -38,31 +45,55 @@
   text-decoration: underline;
 }
 
+ul li{
+  display: inline-block;
+}
+
+h2, h3 {
+  color: white;
+}
+
+ul {
+  margin-left: 5%;
+  text-align: center;
+  vertical-align:top;
+}
+
+/* Menu */
+.menu{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
 .menu a {
   color: rgba(190, 30, 45);
   padding: 8px 16px;
   text-decoration: none;
 }
 
-ul li{
-  display: inline-block;
-}
-
-ul {
-  text-align: center;
-  vertical-align:top;
-}
-
-.menu{
-  vertical-align: baseline;
+.nav-items {
+  padding: 20px;
   border-top: 1.5px solid rgba(190, 30, 45, 0.808);
   border-bottom: 1.5px solid rgb(190, 30, 45);
-  background-color: rgb(255, 255, 255, 0.7);
 }
-.footer-border{
+
+/* Footer */
+.footer-info li a {
+  display: inline-block;
+  color: white;
+}
+
+.footer-border {
   padding: 20px;
   background-color: rgb(190, 30, 45);
+  width: 100%;
 }
+
 .footer-info {
   padding: 0px;
   margin: 0px;
@@ -72,16 +103,10 @@ ul {
   color: white;
 }
 
-.footer-info li a{
-  display: inline-block;
-  color: white;
-}
-
-h2, h3{
-  color: white;
-}
-.App-footer{
+.App-footer {
   width: 100%;
-  position:absolute;
-  bottom:0;
+  position: absolute;
+  bottom: 0;
+  padding: 0px;
+  margin: 0px;
 }
