@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import * as firebase from 'firebase';
 import logo from './kcjazz_redlogo2x.png';
 import './App.css';
+import './index.js';
 import Musicians from './components/musicians';
 import Timeline from './components/timeline';
 import LogIn from './components/login';
@@ -56,6 +58,7 @@ const App = () => (
           <li><Link to="/livejazz">Live Jazz</Link></li>
         </ul>
         <button type="button"><Link to="/login">Log In</Link></button>
+        <button type="button"><Link to="/">Log Out</Link></button>
       </ul>
 
       <Route exact path="/" component={Home}/>
@@ -64,6 +67,7 @@ const App = () => (
       <Route path="/jazztoday" component={JazzToday}/>
       <Route path="/livejazz" component={LiveJazz}/>
       <Route path="/login" component={LogIn}/>
+
 
       <footer className="App-footer">
           <div className="menu-footer">

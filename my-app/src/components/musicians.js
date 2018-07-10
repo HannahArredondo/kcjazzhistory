@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import * as firebase from 'firebase';
 import './components.css';
+import {db} from '../firebase.js';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
+
+
+const musicianDBRef = db.ref().child('data')
 
 const Musician = ({ match }) => (
   <div>
