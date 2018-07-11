@@ -1,42 +1,73 @@
-import React, { Component } from 'react';
-import * as firebase from 'firebase';
+import React from 'react';
 import './components.css';
-import {db} from '../firebase.js';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { Route } from 'react-router-dom';
+var Rebase = require('re-base');
+var firebase = require('firebase/app');
+var database = require('firebase/database');
 
+var thisDB = firebase.initializeApp({
+  apiKey: "AIzaSyBP_nf952wR8ZICsOvxRctjEuElRJS0dGo",
+  authDomain: "kc-jazz.firebaseapp.com",
+  databaseURL: "https://kc-jazz.firebaseio.com",
+  projectId: "kc-jazz",
+  storageBucket:"kc-jazz.appspot.com"
+});
 
-const musicianDBRef = db.ref().child('data')
+var db = firebase.database(thisDB);
+var base = Rebase.createClass(db);
 
-const Musician = ({ match }) => (
-  <div>
-    <h3>{match.params.musicianId}</h3>
-  </div>
-)
+class Musician extends React.Component {
+  constructor(props) {
+    super(props)
+    this.addMusician = this.addMusician.bind(this);
+    this.componentWillMount = this.componentWillMount.bind(this);
+    this.componentWillUnmount = this.componentWillUnmount.bind(this);
+
+    this.state = {
+      musicians: []
+    }
+  }
+
+  addMusician(date) {
+    const musicians = {...this.state.musicians};
+    const id = Date.now();
+    musicians[id] = {
+      id: id,
+      years: date,
+      musician: ""
+    };
+    this.setState({ musicians });
+  }
+
+  componentWillMount() {
+    this.musiciansRef = base.syncState("musicians", {
+      context: this,
+      state: 'musicians'
+    });
+  }
+  componentWillUnmount() {
+    base.removeBinding(this.musiciansRef);
+  }
+
+  render() {
+    console.log(this.state);
+    return (
+      <ul>
+        {this.state.musicians.map((name) => (
+          <li>
+            {name.name} ({name.years})
+            <img src={name.photo} />
+          </li>
+        ))}
+      </ul>
+    )
+  }
+}
 
 const Musicians = ({ match }) => (
   <div className = "info">
     <h2>Musicians</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>
-          Rendering with React
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>
-          Components
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>
-          Props v. State
-        </Link>
-      </li>
-    </ul>
+    <Musician/>
 
     <Route path={`${match.path}/:musicianId`} component={Musician}/>
     <Route exact path={match.path} render={() => (

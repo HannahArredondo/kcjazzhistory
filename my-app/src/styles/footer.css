@@ -1,0 +1,32 @@
+/* Footer */
+.footer-info li a {
+  display: inline-block;
+  color: white;
+}
+
+.footer-border {
+  padding: 20px;
+  background-color: rgba(190, 30, 45, 0.808);
+}
+
+.footer-info li{
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-info {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+  color: white;
+}
+
+.App-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0px;
+  margin: 0px;
+}
