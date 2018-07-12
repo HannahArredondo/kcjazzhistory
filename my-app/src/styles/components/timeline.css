@@ -1,0 +1,7 @@
+.iframe-container {
+  margin-top: 5%;
+  border-top: 20px solid rgba(190, 30, 45, 0.808);
+}
+.iframe-container .tl-headline {
+  color: red;
+}

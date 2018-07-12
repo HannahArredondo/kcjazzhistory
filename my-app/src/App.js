@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
+import { base } from './firebase';
 import logo from './kcjazz_redlogo2x.png';
-import './App.css';
+import './styles/main.css';
 import './index.js';
 import Musicians from './components/musicians';
 import Timeline from './components/timeline';
 import LogIn from './components/login';
+import state from './components/musicians'
 import {
   BrowserRouter as Router,
   Route,
@@ -49,17 +51,21 @@ const App = () => (
   <Router>
     <div className="App">
 
-      <ul className="menu row">
-        <li><Link to="/"><img src={logo} className="App-logo" alt="logo" /></Link></li>
-        <ul className="nav-items">
-          <li><Link to="/timeline">Timeline</Link></li>
-          <li><Link to="/musicians">Musicians</Link></li>
-          <li><Link to="/jazztoday">Jazz Today</Link></li>
-          <li><Link to="/livejazz">Live Jazz</Link></li>
-        </ul>
-        <button type="button"><Link to="/login">Log In</Link></button>
-        <button type="button"><Link to="/">Log Out</Link></button>
-      </ul>
+      <header className="app-header container">
+        <div className="header-wrap">
+          <Link to="/"><img src={logo} className="app-logo" alt="logo" /></Link>
+          <ul className="nav-items">
+            <li><Link to="/timeline">Timeline</Link></li>
+            <li><Link to="/musicians">Musicians</Link></li>
+            <li><Link to="/jazztoday">Jazz Today</Link></li>
+            <li><Link to="/livejazz">Live Jazz</Link></li>
+          </ul>
+          <div className="button-wrapper">
+            <button type="button"><Link to="/login">Log In</Link></button>
+            <button type="button"><Link to="/">Log Out</Link></button>
+          </div>
+        </div>
+      </header>
 
       <Route exact path="/" component={Home}/>
       <Route path="/timeline" component={Timeline}/>
@@ -73,7 +79,7 @@ const App = () => (
           <div className="menu-footer">
               <div className="footer-border">
                 <ul className="footer-info">
-                    <li>Follow the American Jazz Museum at &nbsp;</li>
+                    <li>Follow the American Jazz Museum here:  &nbsp;</li>
                     <li><a href="https://twitter.com/americanjazzkc">Twitter</a> &nbsp;</li>
                 </ul>
               </div>
