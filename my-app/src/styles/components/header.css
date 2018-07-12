@@ -30,7 +30,7 @@
   border-right: 2px solid rgba(190, 30, 45, 0.808);
 }
 .nav-items li:hover {
-  background-color: rgba(190, 30, 45, 0.1);
+  background-color: rgba(114, 114, 114, 0.17);
 }
 .nav-items li:last-child {
   padding: 10px;

@@ -1,6 +1,10 @@
 import React from 'react';
 import './components.css';
-import { Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 var Rebase = require('re-base');
 var firebase = require('firebase/app');
 var database = require('firebase/database');
@@ -51,13 +55,18 @@ class Musician extends React.Component {
 
   render() {
     console.log(this.state);
+
     return (
       <ul>
         {this.state.musicians.map((name) => (
-          <li>
-            {name.name} ({name.years})
-            <img src={name.photo} />
-          </li>
+          <Link to="/">
+            <li>
+              <div className="music-box">
+                <h3> {name.name} </h3>
+                <p> ({name.years})</p>
+              </div>
+            </li>
+          </Link>
         ))}
       </ul>
     )
@@ -66,12 +75,13 @@ class Musician extends React.Component {
 
 const Musicians = ({ match }) => (
   <div className = "info">
-    <h2>Musicians</h2>
-    <Musician/>
-
+    <p>These KC Jazz Musicians have impacted the history of Jazz in the area.</p>
+    <div className="musician-box">
+      <Musician/>
+    </div>
     <Route path={`${match.path}/:musicianId`} component={Musician}/>
     <Route exact path={match.path} render={() => (
-      <h3>Please select a topic.</h3>
+      <p>Please select a musician you wish to learn more about.</p>
     )}/>
   </div>
 )
