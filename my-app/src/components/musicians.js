@@ -64,6 +64,7 @@ class Musician extends React.Component {
               <div className="music-box">
                 <h3> {name.name} </h3>
                 <p> ({name.years})</p>
+                <img src={name.photo} />
               </div>
             </li>
           </Link>
@@ -75,13 +76,13 @@ class Musician extends React.Component {
 
 const Musicians = ({ match }) => (
   <div className = "info">
-    <p>These KC Jazz Musicians have impacted the history of Jazz in the area.</p>
+    <h2>Musicians</h2>
     <div className="musician-box">
       <Musician/>
     </div>
     <Route path={`${match.path}/:musicianId`} component={Musician}/>
     <Route exact path={match.path} render={() => (
-      <p>Please select a musician you wish to learn more about.</p>
+      <h3>Please select a topic.</h3>
     )}/>
   </div>
 )

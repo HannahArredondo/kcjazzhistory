@@ -1,7 +1,16 @@
 .iframe-container {
   margin-top: 5%;
-  border-top: 20px solid rgba(190, 30, 45, 0.808);
+  border-top: 15px solid white;
+  outline: 20px solid rgba(190, 30, 45, 0.808);
+  position: relative;
 }
-.iframe-container .tl-headline {
-  color: red;
+.iframe-container::after {
+  content: "";
+  display: block;
+  border-bottom: 20px solid white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
 }

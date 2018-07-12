@@ -1,5 +1,11 @@
+/* Font */
+@font-face {
+  font-family: BanglaMN;
+  src: url(../../Bangla MN.ttf);
+}
+
 /* Headers */
-h3 {
+h3, h2, p, ul {
   font-weight: 300;
 }
 

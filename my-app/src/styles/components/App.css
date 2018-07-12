@@ -8,12 +8,14 @@ body {
   background-image: url('../../jazz_background.png');
   background-color: gray;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .info{
   text-align: center;
   width: 80%;
-  max-width: 700px;
+  max-width: 900px;
+  min-height: 400px;
   margin: 30px auto;
   color: white;
   font-weight: 300;
@@ -27,4 +29,9 @@ body {
   color: white;
   padding: 8px 16px;
   text-decoration: underline;
+}
+
+.style-box li {
+  text-align: left;
+
 }

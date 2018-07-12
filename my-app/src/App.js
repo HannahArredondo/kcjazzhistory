@@ -28,13 +28,45 @@ const Home = () => (
         Kansas City is known as one of the most popular "cradles of jazz". Other cities
         include New Orleans, Chicago, St. Louis, Pittsburgh, Philadelphia, and New
         York City.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C_3Ffw1DlpU"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <ul className="style-box"> <h3>Kansas City jazz is distinguished by the following musical elements:</h3>
+        <li> A preference for a 4 feel (walking) over the 2 beat feel found in other jazz
+        styles of the time. As a result, Kansas city jazz had a more relaxed, fluid sound
+        than other jazz styles.</li>
+        <li> Extended soloing. Fueled by the non-stop nightlife under political boss Tom
+        Pendergast, Kansas City jam sessions went on well past sunrise, fostering a highly
+        competitive atmosphere and a unique jazz culture in which the goal was to "say something"
+        with one's instrument, rather than simply show off one's technique. It was not uncommon
+        for one "song" to be performed for several hours, with the best musicians often soloing
+        for dozens of choruses at a time.</li>
+        <li> So-called "head arrangements". The KC big bands often played by memory, composing and
+        arranging the music collectively, rather than sight-reading as other big bands of the time
+        did. This further contributed to the loose, spontaneous Kansas City sound. </li>
+        <li> A heavy blues influence, with KC songs often based around a 12-bar blues structure,
+        rather than the 32 bar AABA standard, although Moten Swing is in this AABA format.</li>
+        <li> One of the most recognizable characteristics of Kansas City jazz is frequent, elaborate
+        riffing by the different sections. Riffs were often created - or even improvised - collectively,
+        and took many forms: a) one section riffing alone, serving as the main focus of the music;
+        b) one section riffing behind a soloist, adding excitement to the song; or c) two or more
+        sections riffing in counterpoint, creating an exciting hard-swinging sound. The Count Basie
+        signature tunes "One O'Clock Jump" and "Jumpin' at the Woodside", for example, are simply
+        collections of complex riffs, memorized in a head arrangement, and punctuated with solos. Glenn
+        Millers famous swing anthem "In the Mood" closely follows the Kansas City pattern of riffing
+        sections, and is a good example of the Kansas City style after it had been exported to the rest
+        of the world.</li>
+      </ul>
       </div>
   </div>
 )
 
 const JazzToday = () => (
   <div className = "info">
-    <h2>Jazz today blah blah blah</h2>
+    <h2> Kansas City Jazz Today </h2>
+    <p>Kansas City Jazz has a rich and real history there is no doubt. As important,
+    Kansas City Jazz is alive, thriving and still growing. The sheer number of amazingly
+    talented musicians in Kansas City is beyond comparison... especially for the size
+    of our wonderful city.</p>
   </div>
 )
 

@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import './components.css';
+import {
+  Route,
+  Redirect
+} from 'react-router'
 
 class LogIn extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {username: '', password:''};
+    this.state = {username: '', password:'', isLoggedIn:false};
     //
     // this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,11 +19,18 @@ class LogIn extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log(event,this.state);
     event.preventDefault();
     if (this.state.password === "password" && this.state.username === "username"){
-      console.log("Welcome {this.state.username}")
-    } else{ console.log("FAIL!");}
+      this.setState({isLoggedIn: true});
+      console.log("WELCOME!");
+      console.log(this.state);
+      
+
+    } else{
+      console.log("FAIL!");
+      console.log(this.state);
+  }
+
   }
 
   render(){
@@ -33,13 +44,5 @@ class LogIn extends React.Component {
     </form>
   )
 }
-
-
-
-// function checkUser(props) {
-//   if (props.password === "password" && props.user === "username"){
-//     console.log("Success!")
-//   }
-// }
 }
 export default LogIn;
